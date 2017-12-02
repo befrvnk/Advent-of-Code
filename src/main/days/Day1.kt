@@ -1,7 +1,7 @@
-package days
+package main.days
 
-import INPUT_DAY1
 import printSolution
+import readInput
 
 private fun first(input: String): Int {
     return captcha(input, { (it + 1) % input.length})
@@ -20,5 +20,6 @@ private fun captcha(input: String, validationPosition: (index: Int) -> Int): Int
 }
 
 fun main(args: Array<String>) {
-    printSolution(first(INPUT_DAY1).toString(), second(INPUT_DAY1).toString())
+    val input = readInput("day1.txt")
+    printSolution(first(input).toString(), second(input).toString())
 }
